@@ -1,12 +1,64 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>
+{% extends '@AdminLTE/layout/default-layout.html.twig' %}
+
+{#{% block html_start %}  {% endblock %}#}
+
+{% block title %} Main page {% endblock %}
+
+{#{% block stylesheets %}  {% endblock %}#}
+
+{#{% block head %}  {% endblock %}#}
+
+{#{% block body_start %}  {% endblock %}#}
+
+{#{% block after_body_start %}  {% endblock %}#}
+
+{% block logo_path %}/{% endblock %}
+
+{% block logo_mini %} S {% endblock %}
+
+{% block logo_large %} Sandbox {% endblock %}
+
+{#{% block navbar_toggle %}  {% endblock %}#}
+
+{#{% block navbar_messages %}  {% endblock %}#}
+
+{#{% block navbar_notifications %}  {% endblock %}#}
+
+{#{% block navbar_tasks %}  {% endblock %}#}
+
+{#{% block navbar_user %}  {% endblock %}#}
+
+{#{% block navbar_control_sidebar_toggle %}  {% endblock %}#}
+
+{#{% block sidebar_user %}  {% endblock %}#}
+
+{#{% block sidebar_search %}  {% endblock %}#}
+
+{#{% block sidebar_nav %}  {% endblock %}#}
+
+{% block page_title %} Describe blocks {% endblock %}
+
+{% block page_subtitle %} for test {% endblock %}
+
+{#{% block breadcrumb %}  {% endblock %}#}
+
+{% block page_content_before %} Content before {% endblock %}
+
+{#{% block page_content_class %}  {% endblock %}#}
+
+{% block page_content %}
+    {% for block in blocks %}
+        <p><strong>{{ block.name }}</strong></p>
+        <p>{{ block.describe }}</p>
+        <br>
+    {% endfor %}
+{% endblock %}
+
+{% block page_content_after %} Content after {% endblock %}
+
+{#{% block footer %}  {% endblock %}#}
+
+{#{% block control_sidebar %}  {% endblock %}#}
+
+{#{% block javascripts %}  {% endblock %}#}
+
